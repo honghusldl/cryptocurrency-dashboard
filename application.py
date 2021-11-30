@@ -2,11 +2,7 @@ import os
 from re import template
 import numpy as np 
 import pandas as pd 
-import matplotlib.pyplot as plt
-import seaborn as sns
-from PIL import Image
-from datetime import datetime
-import plotly.graph_objects as go
+#from PIL import Image
 from functions import load_data, get_df, get_month,get_day,get_percentage,get_df_pv
 
 import streamlit as st
