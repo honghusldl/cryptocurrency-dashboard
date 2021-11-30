@@ -1,9 +1,7 @@
 import os
 import numpy as np 
 import pandas as pd 
-import seaborn as sns
 from datetime import datetime
-color = sns.color_palette()
 
 def load_data():
     # import data
