@@ -37,7 +37,7 @@ def main():
   row_1.markdown('---')
 
   # ROW 2: Life span table
-  row_2_spacer_1, row_2_1,row_2_2, row_2_spacer_2 = st.columns((0.3,2,1,0.3))
+  row_2_spacer_1, row_2_1,row_2_2, row_2_spacer_2 = st.columns((0.3,1.7,1.3,0.3))
 
   with row_2_1:
     st.subheader('Life Span')
