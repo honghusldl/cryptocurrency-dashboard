@@ -1,7 +1,3 @@
-import os
-from re import template
-import numpy as np 
-import pandas as pd 
 #from PIL import Image
 from functions import load_data, get_df, get_month,get_day,get_percentage,get_df_pv
 
