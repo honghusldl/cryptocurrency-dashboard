@@ -1,5 +1,4 @@
 pandas
 numpy
-seaborn
-streamlit
-plotly
+streamlit ==1.2.0
+plotly == 4.14.3
