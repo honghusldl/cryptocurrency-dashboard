@@ -46,7 +46,7 @@ def main():
     
     fig_bar_lifespan = st.plotly_chart(
       px.bar(data_frame=df_minmax,x=df_minmax.index,y='Duration', color=df_minmax.index,
-      title='Duration on Market by Currency',hover_data=['First Day','Last Day'],height = 600,width=1000,
+      title='Duration on Market by Currency',hover_data=['First Day','Last Day'],height = 600,width=800,
       labels={'Duration':'Duration on Market in Days'}, text = 'Duration'
       ).update_traces(textposition = 'outside').update_layout(showlegend=False)
     )
@@ -75,7 +75,7 @@ def main():
     st.subheader('Overview: Market Capitalization')
     fig_line_cap = st.plotly_chart(
       px.line(data_frame=df, x='Date',y='Market_Capitalization',
-      color='Name', width=1200, height=600,
+      color='Name', width=1000, height=600,
       labels= {'Market_Capitalization':'Market Cap in USD','Volume':'Traded Volume'},template='seaborn'
       ).add_vline(x='2017-01-01',line_width = 3, line_dash = 'dot',line_color = 'red'
       ).add_annotation(x='2017-01-01',y=max(df['Market_Capitalization'])*0.85,text="'Cryptocurrency Fever' Began"
@@ -144,7 +144,7 @@ def main():
       'Low':'Lowest Price in USD',
       'Open':'Opening Price in USD',
       'Close':'Closing Price in USD'},
-      height=500,width=1250
+      height=500,width=1050
       ).add_bar(x=df_query['Date'],y=df_query[price_type_bar],name=price_type_bar
       ).update_layout(showlegend = False)
     )
@@ -166,7 +166,7 @@ def main():
     fig_bubble_volume = st.plotly_chart(
       px.scatter(data_frame = df_pv.query(f"Date == '{target_date2}'"),x='Close',y='Market_Capitalization',
       labels={'Close':'Closing Price','Market_Capitalization':'Market Capitalization'},
-      size='Volume',color='Name',log_x=True,log_y=True,width=800,height=500)
+      size='Volume',color='Name',log_x=True,log_y=True,width=700,height=500)
     )
   with row_8_2:
     st.markdown(":warning:Note: The chart is applied with log transformation on both X and Y axis.")
@@ -185,7 +185,7 @@ def main():
     df_query2 = df_pv.query("Name == @currency_name_pv")
     fig_line_volume_price = st.plotly_chart(
       px.line(data_frame=df_query2.melt(id_vars=['Name','Date','High','Open','Low']),x='Date',y='value',color='variable',
-      height=500,width=900,log_y=True)
+      height=500,width=700,log_y=True)
     )
 
 
